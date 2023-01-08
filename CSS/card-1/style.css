@@ -1,0 +1,32 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.course-card-image {
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.course-card-content {
+  padding: 20px;
+}
+
+.course-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.course-card-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
