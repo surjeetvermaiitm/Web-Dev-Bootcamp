@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 400px;
+  border: 2px solid black;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row-reverse; */
+  /* flex-wrap: wrap-reverse; */
+  /* flex-wrap: wrap; */
+  /* justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: left;
+  justify-content: space-evenly;
+  justify-content: space-between; */
+
+  /* flex-wrap: wrap;//next row while squize
+  justify-content: space-evenly;
+  align-items: baseline; */
+  /* justify-content->main axis */
+  /* align-content-->col axis */
+  /* flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+
+  /* flex-flow:column nowrap */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  /* align-content: flex-start;
+  align-content: flex-end;
+  align-content: space-between;
+  align-content: space-around; */
+}
+.box {
+  border: 1px solid green;
+  background-color: aqua;
+  width: 50px;
+  /* flex-grow: 1; */
+  /* flex-shrink: 4; */
+  /* flex-basis: 100px;similar to width,overflow content is visible and width increases */
+
+  /* flex: 3 4 2 100px; order grow shrink basis*/
+}
+#box1 {
+  order: 1;
+  /* flex-grow: 1; */
+  /* flex-shrink: 8; */
+  align-self: stretch;
+}
+#box2 {
+  order: 2;
+  align-self: flex-end;
+}
