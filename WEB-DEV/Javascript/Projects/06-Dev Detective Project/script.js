@@ -1,3 +1,4 @@
+//www.https://codehelp-devdetactive.netlify.app
 //Variables
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
@@ -14,7 +15,20 @@ const avatar = get("avatar");
 const userName = get("name");
 const user = get("user");
 const date = get("date");
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 const bio = get("bio");
 const repos = get("repos");
 const followers = get("followers");
@@ -87,17 +101,28 @@ function updateProfile(data) {
     user.innerText = `@${data.login}`;
     user.href = `${data.html_url}`;
     datesegments = data.created_at.split("T").shift().split("-");
-    date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`;
-    bio.innerText = data.bio == null ? "This profile has no bio" : `${data.bio}`;
+    date.innerText = `Joined ${datesegments[2]} ${
+      months[datesegments[1] - 1]
+    } ${datesegments[0]}`;
+    bio.innerText =
+      data.bio == null ? "This profile has no bio" : `${data.bio}`;
     repos.innerText = `${data.public_repos}`;
     followers.innerText = `${data.followers}`;
     following.innerText = `${data.following}`;
-    user_location.innerText = checkNull(data.location, user_location) ? data.location : "Not Available";
+    user_location.innerText = checkNull(data.location, user_location)
+      ? data.location
+      : "Not Available";
     page.innerText = checkNull(data.blog, page) ? data.blog : "Not Available";
     page.href = checkNull(data.blog, page) ? data.blog : "#";
-    twitter.innerText = checkNull(data.twitter_username, twitter) ? data.twitter_username : "Not Available";
-    twitter.href = checkNull(data.twitter_username, twitter) ? `https://twitter.com/${data.twitter_username}` : "#";
-    company.innerText = checkNull(data.company, company) ? data.company : "Not Available";
+    twitter.innerText = checkNull(data.twitter_username, twitter)
+      ? data.twitter_username
+      : "Not Available";
+    twitter.href = checkNull(data.twitter_username, twitter)
+      ? `https://twitter.com/${data.twitter_username}`
+      : "#";
+    company.innerText = checkNull(data.company, company)
+      ? data.company
+      : "Not Available";
     searchbar.classList.toggle("active");
     profilecontainer.classList.toggle("active");
   } else {
@@ -105,7 +130,9 @@ function updateProfile(data) {
   }
 }
 //dark mode default
-const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+const prefersDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 const localStorageDarkMode = localStorage.getItem("daresfesf");
 if (localStorageDarkMode === null) {
   localStorage.setItem("dark-mode", prefersDarkMode);
