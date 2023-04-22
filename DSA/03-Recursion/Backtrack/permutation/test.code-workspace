@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"name": "test",
+		"path": "../../../../../../Devnest/Frontend/test"
+	},
+	{
+		"name": "Fullstack",
+		"path": "../../../../.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Fullstack",
+    "liveServer.settings.port": 5501
+  }
+}
